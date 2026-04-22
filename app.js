@@ -11,6 +11,8 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(ma
 var satelit = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}');
 L.control.layers({"OSM":osm,"Satelit":satelit}).addTo(map);
 
+console.log(json_PETADESASEA_2);
+
 // routing
 function bukaRute(lat,lng){
 window.open(`https://www.google.com/maps?q=${lat},${lng}`);
