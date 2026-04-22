@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SIG Pemakaman Desa Sea</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="header">
+
+<button id="toggleSidebar" onclick="toggleSidebar()">☰</button>
+
+<div class="title">SIG Pemakaman Desa Sea</div>
+
+<a href="https://wa.me/6282167321859" target="_blank" class="contact-btn">
+WhatsApp
+</a>
+
+</div>
+
+<div id="container">
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+<div class="card">
+<b>Filter Kategori</b>
+<select onchange="filterKategori(this.value)">
+<option value="all">Semua</option>
+<option value="kristen">Kristen</option>
+<option value="islam">Islam</option>
+</select>
+</div>
+
+<div class="card">
+<b>Layer</b>
+
+<div class="layer-item" onclick="zoomToLayer('kristen')">
+<div class="row">
+<div class="color-box" style="background:#81c784"></div>
+Kristen
+</div>
+<input type="checkbox" checked onchange="toggleLayer('kristen', this)">
+</div>
+
+<div class="layer-item" onclick="zoomToLayer('kristen2')">
+<div class="row">
+<div class="color-box" style="background:#4fc3f7"></div>
+Kristen 2
+</div>
+<input type="checkbox" checked onchange="toggleLayer('kristen2', this)">
+</div>
+
+<div class="layer-item" onclick="zoomToLayer('islam')">
+<div class="row">
+<div class="color-box" style="background:#ffb74d"></div>
+Islam
+</div>
+<input type="checkbox" checked onchange="toggleLayer('islam', this)">
+</div>
+
+<div class="layer-item" onclick="zoomToLayer('desa')">
+<div class="row">
+<div class="color-box" style="background:#b0bec5"></div>
+Desa Sea
+</div>
+<input type="checkbox" checked onchange="toggleLayer('desa', this)">
+</div>
+
+</div>
+
+<div class="card">
+<b>Mahasiswa</b><br><br>
+Nama: <b></b><br>
+<b>Edward Gabriel Alexandro Tatambihe</b><br>
+<br>
+NIM: <b></b><br>
+<b>241011060031</b>
+</div>
+
+<div class="card">
+<button onclick="toggleMode()">Mode Tampilan</button>
+</div>
+
+</div>
+
+
+<!-- MAIN -->
+<div id="main">
+
+<div id="map"></div>
+
+<div id="info-desa">
+<h2>Informasi</h2>
+
+<p>● Pendaftaran Pemakaman Desa Sea hanya dapat dilakukan oleh warga yang berdomisili wilayah Sea di KTP.</p>
+<p>● Pemakaman dibagi berdasarkan agama Kristen dan Islam.</p>
+<p>● Untuk mendaftarkan lahan pemakaman dapat menghubungi Kantor Desa atau melalui tombol WhatsApp.</p>
+
+</div>
+
+</div>
+
+<!-- KOORDINAT -->
+<div id="coordinate-info">Lat: - | Lng: -</div>
+
+<!-- KOMPAS -->
+<div id="compass">N</div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="data/PETADESASEA_2.js"></script>
+<script src="data/PemakamanKristenSea_3.js"></script>
+<script src="data/PemakamanSeaIslam_4.js"></script>
+<script src="data/PemakamanSeaKristen_5.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
